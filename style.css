@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #fff;
+  background-size: cover;
+  background-image: linear-gradient(rgba(16, 2, 100, 0.8), rgba(16, 2, 100, 0.8)), url(./creativity.jpg);
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 3rem 0;
+}
+
+form input {
+  font-size: 17px;
+  width: 50%;
+  max-width: 20rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: none;
+  border-left: 1px solid #000;
+  border-radius: 0 5px 5px 0;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+form button:hover {
+  color: #f00;
+}
+
+.no-result {
+  margin-left: 40%;
+  margin-top: 3%;
+  color: red;
+  font-weight: bold;
+}
+
+.photos-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.photo-card {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+.photo-card a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 3px;
+  text-decoration: none;
+  color: #6a6767;
+  transition: color 0.3s ease-in-out;
+}
+
+.photo-card a:hover {
+  color: #00f;
+}
+
+.more-photos-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #6a6767;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+  display: none;
+}
+
+.more-photos-btn:hover {
+  border: 1px solid #fff;
+}
+
+.more-photos-btn span {
+  margin-top: 0.2rem;
+  margin-left: 5px;
+}
+
+
+
+@media screen and (max-width: 425px) {
+
+  .photos-container {
+    display: grid; 
+    grid-template-columns: 1fr;
+  }  
+} 
+
+@media screen and (min-width: 426px) {
+  h1 {
+    font-size: 30px;
+  }
+  .photos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }  
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 40px;
+  }
+  .photos-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+  }  
+}
+
+@media screen and (min-width: 1441px) {
+  .photos-container {
+    width: 70%;
+    gap: 4rem;
+  }  
+  .photo-card img {
+    height: 260px;
+  }  
+  .photo-card a {
+    font-size: 1rem;
+  }
+}
